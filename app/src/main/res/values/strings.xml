@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CatSearch</string>
+    <string name="Navigation1">Search</string>
+    <string name="Navigation2">Favourites</string>
+    <string name="Cat_Breed_Placeholder">Cat_Breed_Placeholder</string>
+    <string name="Title">Title</string>
+    <string name="Description">Description:</string>
+    <string name="Description_Placeholder">The Exotic Shorthair is a gentle friendly cat that has the same personality as the Persian. They love having fun, don’t mind the company of other cats and dogs, also love to curl up for a sleep in a safe place. Exotics love their own people, but around strangers they are cautious at first. Given time, they usually warm up to visitors.:</string>
+    <string name="Weight">Weight:</string>
+    <string name="Weight_Placeholder">Weight_Placeholder</string>
+    <string name="Temperament">Temperament:</string>
+    <string name="Temperament_Placeholder">Temperament_Placeholder</string>
+    <string name="Origin">Origin:</string>
+    <string name="Origin_Placeholder">Origin_Placeholder</string>
+    <string name="LifeSpan">Life span:</string>
+    <string name="LifeSpan_Placeholder">LifeSpan_Placeholder</string>
+    <string name="WikipediaLink">Wikipedia link:</string>
+    <string name="WikipediaLink_Placeholder">WikipediaLink_Placeholder</string>
+    <string name="DogFriendlinessLevel">Dog friendliness level:</string>
+    <string name="DogFriendlinessLevel_Placeholder">DogFriendlinessLevel_Placeholder</string>
+    <string name="NoData">No data available.</string>
+    <string name="ToDo">ToDo</string>
+</resources>

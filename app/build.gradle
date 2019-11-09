@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.example.nytimes"
+        minSdkVersion 29
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // Prints out the schema of my database to the “schemas” folder of my project. (Week 8, Room)
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    // Add RecyclerView Support:
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0'
+
+    // Add BottomNavigationBar Support:
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // Add "JSON strings --> Java objects" converter support (Google library):
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // Add Glide (Load images from URLs into ImageViews) support:
+    implementation ("com.github.bumptech.glide:glide:4.9.0") {
+        exclude group: "com.android.support"
+    }
+
+    // Add Volley (Handling API requests) support:
+    implementation 'com.android.volley:volley:1.1.1'
+
+    //noinspection GradleCompatible
+    implementation "com.android.support:support-fragment:28.0.0"
+
+    // Add Room (Android SQLite FakeDatabase) Support
+    //implementation "androidx.room:room-runtime:2.2.1"
+    //annotationProcessor "androidx.room:room-compiler:2.2.1“
+    // Old
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+}
